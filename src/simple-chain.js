@@ -2,16 +2,17 @@ const { NotImplementedError } = require('../extensions/index.js');
 
 /**
  * Implement chainMaker object according to task description
- * 
+ *
  */
 const chainMaker = {
   getLength() {
     throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
   },
-  addLink(/* value */) {
-    throw new NotImplementedError('Not implemented');
+  addLink(value) {
+    // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
+    return `(${value})`;
   },
   removeLink(/* position */) {
     throw new NotImplementedError('Not implemented');
