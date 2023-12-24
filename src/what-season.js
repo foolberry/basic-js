@@ -14,20 +14,14 @@ const { NotImplementedError } = require('../extensions/index.js');
 function getSeason(date) {
   // throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
-  if (arguments.length == 0) throw new Error('Unable to determine the time of year!');
+  if (arguments.length == 0) return 'Unable to determine the time of year!';
+  if (Object.keys(date) != 0 || date instanceof Date == false) throw new Error('Invalid date!');
 
   let intDate = new Date(date);
-
   let season;
   let month = intDate.getMonth();
   let year = intDate.getYear();
   let day = intDate.getDay();
-  console.log (year);
-  console.log (month);
-  console.log (day);
-
-
-  if (isNaN(month) || isNaN(year) || isNaN(day)) throw new Error('Invalid date!');
 
   switch(month) {
     case 11:
@@ -53,8 +47,7 @@ function getSeason(date) {
 
   }
 
-
-return season;
+  return season;
 }
 
 module.exports = {
